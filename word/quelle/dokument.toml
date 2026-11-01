@@ -1,0 +1,191 @@
+# Dokument
+# Diese Datei legt Seite, Schrift, Design, Abschnitte mit ihren Bestandteilen, Kopf- und Fußzeile, Dateien und Metadaten fest.
+
+# Seite und Satzspiegel
+[seite.format]
+breite = '21 cm'
+hoehe = '29,7 cm'
+
+[seite.rand]
+oben = '2,5 cm'
+unten = '3 cm'
+links = '3 cm'
+rechts = '3 cm'
+bundsteg = '0 cm'
+kopfzeile = '1,25 cm'
+fusszeile = '1,25 cm'
+
+[seite.vorspann]
+kopfzeile = '1,2 cm'
+fusszeile = '1,2 cm'
+
+[seite.nachspann]
+unten = '2 cm'
+links = '2,5 cm'
+rechts = '2,5 cm'
+
+# Standards und Designschriften
+[dokument.standard]
+schriftart = 'Calibri'
+schriftgroesse = '11 pt'
+sprache = 'de-DE'
+zeilenabstand = '1,5 Zeilen'
+abstandnach = '0 pt'
+ausrichtung = 'Blocksatz'
+
+[dokument.designtext]
+schriftart = 'Calibri'
+
+[dokument.designueberschrift]
+schriftart = 'Calibri Light'
+
+# Designfarben
+[dokument.designfarbe]
+dunkel1 = '000000'
+hell1 = 'FFFFFF'
+dunkel2 = '44546A'
+hell2 = 'E7E6E6'
+akzent1 = '5B9BD5'
+akzent2 = 'ED7D31'
+akzent3 = 'A5A5A5'
+akzent4 = 'FFC000'
+akzent5 = '4472C4'
+akzent6 = '70AD47'
+link = '0563C1'
+linkbesucht = '954F72'
+
+# Silbentrennung
+[dokument.silbentrennung]
+automatisch = 'ja'
+zone = '0,75 cm'
+folgen = '2'
+versalien = 'nein'
+
+# Dokumenteinstellungen
+[dokument.einstellung]
+standardtab = '1,25 cm'
+kompatibilitaet = '15'
+standardtabelle = 'Tabelle'
+felderaktualisieren = 'nein'
+latentkatalog = 'nein'
+schrifteneinbetten = 'nein'
+bilderkomprimieren = 'ja'
+
+[dokument.rolle]
+platzhalter = 'PlaceholderText'
+klickfolge = 'Klickfolge'
+stichwort = 'TippStichwort'
+verzeichnistitel = 'ÜberschriftohneNummer'
+ueberschrift = 'Heading1; Heading2; Heading3'
+standard = 'Normal'
+fussnote = 'FootnoteText'
+kaestchen = 'kikaestchen'
+
+# Abschnitte
+[abschnitt.vorspann]
+inhalt = 'titelblatt; formular.erklaerung; formular.umfang; formular.freigabe; formular.sperrklausel; formular.kurzfassung; verzeichnis.inhalt; verzeichnis.abkuerzungen; verzeichnis.abbildungen; verzeichnis.tabellen'
+zaehlung = 'römisch groß'
+beginn = 'fortlaufend'
+ersteseite = 'ja'
+kopfverknuepft = 'nein'
+kopfersteverknuepft = 'nein'
+fussverknuepft = 'nein'
+fussersteverknuepft = 'nein'
+kopf = 'vorspann'
+kopferste = 'titelblatt'
+fuss = 'seiten'
+fusserste = 'titelblatt'
+
+[abschnitt.kapitel1]
+wechsel = 'neue Seite'
+zaehlung = 'arabisch'
+beginn = 'neu'
+startwert = '1'
+ersteseite = 'ja'
+kopfverknuepft = 'nein'
+kopfersteverknuepft = 'ja'
+fussverknuepft = 'ja'
+fussersteverknuepft = 'nein'
+kopf = 'kapitel'
+fusserste = 'seiten'
+
+[abschnitt.kapitel]
+wechsel = 'neue Seite'
+zaehlung = 'arabisch'
+beginn = 'fortlaufend'
+ersteseite = 'ja'
+kopfverknuepft = 'ja'
+kopfersteverknuepft = 'ja'
+fussverknuepft = 'ja'
+fussersteverknuepft = 'ja'
+
+[abschnitt.nachspann]
+inhalt = 'verzeichnis.quellen; anhang.ueberschrift; verzeichnis.anlagen; formular.kierklaerung; anhang.musteranlage'
+wechsel = 'neue Seite'
+zaehlung = 'römisch groß'
+beginn = 'neu'
+startwert = '11'
+ersteseite = 'nein'
+kopfverknuepft = 'nein'
+fussverknuepft = 'ja'
+endabsatz = 'nein'
+kopf = 'nachspann'
+
+# Kopf- und Fußzeile
+[kopf.titelblatt]
+inhalt = ''
+stil = 'Header'
+
+[kopf.vorspann]
+inhalt = ''
+stil = 'Header'
+
+[kopf.kapitel]
+inhalt = '{feld.kapitelname}'
+stil = 'KopfzeilemitLinie'
+
+[kopf.nachspann]
+inhalt = ''
+stil = 'Header'
+
+[fuss.titelblatt]
+inhalt = ''
+stil = 'Footer'
+
+[fuss.seiten]
+inhalt = '{angabe.titel}{tab}{feld.seitenzahl}'
+stil = 'FußzeilemitLinie'
+titelstil = 'Strong'
+
+# Datei
+[datei.dotx]
+name = 'Wissenschaftliche-Arbeit-SZI-englisch.dotx; Wissenschaftliche-Arbeit-SZI-deutsch.dotx'
+menues = 'englisch; deutsch'
+
+# Metadaten der Vorlage
+autor = ''
+zuletztvon = ''
+firma = ''
+ueberarbeitungen = 'nein'
+persoenlichentfernen = 'ja'
+
+[datei.dhbwlogo]
+name = 'DHBW_LOE_Drucklogo.jpg'
+pruefsumme = 'e4b079d510966606ab78b51d6e54b526f80af8cc902ec77cdbb60ef158ca27c8'
+link = 'https://bwsyncandshare.kit.edu/public.php/dav/files/paDS7F4xbb9ycxM/Logo%20DHBW%20L%C3%B6rrach/DHBW_LOE_Drucklogo.jpg'
+
+[datei.firmenlogo]
+link = ''
+zuschnitt = ''
+
+[datei.dhbwplatzhalter]
+name = 'dhbwplatzhalter.svg'
+pruefsumme = '1e8f40fad0d29db790abffdb56218c5ff578aa400c2a39a92137163a79a0113f'
+
+[datei.firmenplatzhalter]
+name = 'firmenplatzhalter.svg'
+pruefsumme = 'dc30b98bd256b1266254ecde3961bcdce7891b769f5ac8f8993622a308cc307c'
+
+[datei.bildplatzhalter]
+name = 'bildplatzhalter.svg'
+pruefsumme = '65d103134fee2b777c24df3e955c39e883d8606d162f9d3cee3e497e36466dcd'

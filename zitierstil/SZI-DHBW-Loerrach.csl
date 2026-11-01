@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="note" default-locale="de-DE" et-al-min="4" et-al-use-first="1" and="text" delimiter-precedes-last="never" demote-non-dropping-particle="never">
+  <info>
+    <title>SZI DHBW Lörrach</title>
+    <id>urn:uuid:b834966f-674d-4f6b-9ad4-96f500206201</id>
+    <author>
+      <name>Finn Dallügge</name>
+    </author>
+    <category citation-format="note"/>
+    <updated>2026-10-31T16:56:13+01:00</updated>
+    <rights license="https://unlicense.org/">The Unlicense</rights>
+  </info>
+  <locale>
+    <terms>
+      <term name="et-al">et al.</term>
+      <term name="editor" form="short">Hg.</term>
+      <term name="page-range-delimiter">-</term>
+      <term name="article-locator" form="short">Art.</term>
+      <term name="table" form="short">Tab.</term>
+      <term name="appendix" form="short">Anh.</term>
+    </terms>
+  </locale>
+  <macro name="verfasser">
+    <names variable="author">
+      <name name-as-sort-order="all" initialize-with=". "/>
+      <substitute>
+        <choose>
+          <!-- Bei diesen Typen steht der Herausgeber im Rumpf oder entfällt. -->
+          <if type="chapter entry-dictionary entry-encyclopedia article-journal paper-conference" match="none">
+            <text macro="herausgeber"/>
+          </if>
+        </choose>
+        <names variable="director"/>
+        <names variable="host"/>
+        <names variable="composer"/>
+        <choose>
+          <!-- Gericht oder Parlament. Beim Patent nennt authority nur das Amt. -->
+          <if type="legal_case bill hearing" match="any">
+            <text variable="authority"/>
+          </if>
+          <else-if type="software">
+            <text variable="publisher"/>
+          </else-if>
+        </choose>
+        <text macro="ohne-verfasser"/>
+      </substitute>
+    </names>
+  </macro>
+  <!-- Als Makro, weil Zotero einen Text direkt in substitute verwirft. Das Komma aus „o.V., o.J.“ (Richtlinie) nur
+       im Verzeichnis: Dort ist position nie wahr. -->
+  <macro name="ohne-verfasser">
+    <text value="o.V."/>
+    <choose>
+      <if position="first subsequent" variable="issued" match="none">
+        <text value=","/>
+      </if>
+    </choose>
+  </macro>
+  <macro name="herausgeber">
+    <names variable="editor">
+      <name name-as-sort-order="all" initialize-with=". "/>
+      <label form="short" prefix=" (" suffix=")"/>
+      <substitute>
+        <names variable="container-author"/>
+      </substitute>
+    </names>
+  </macro>
+  <macro name="kopf">
+    <choose>
+      <if type="legislation" variable="title title-short" match="all">
+        <text variable="title"/>
+        <text variable="title" form="short" prefix=" (" suffix=")"/>
+      </if>
+      <else-if type="legislation standard" match="any">
+        <text macro="kurztitel"/>
+      </else-if>
+      <else>
+        <text macro="verfasser"/>
+      </else>
+    </choose>
+  </macro>
+  <!-- Gesetz mit Kürzel, Norm mit Nummer -->
+  <macro name="kurztitel">
+    <choose>
+      <if type="standard" variable="number" match="all">
+        <text variable="number"/>
+      </if>
+      <else-if variable="title title-short" match="any">
+        <text variable="title" form="short"/>
+      </else-if>
+      <else>
+        <text macro="ohne-verfasser"/>
+      </else>
+    </choose>
+  </macro>
+  <macro name="jahr">
+    <choose>
+      <if variable="issued">
+        <date variable="issued">
+          <date-part name="year"/>
+        </date>
+      </if>
+      <else>
+        <text value="o.J."/>
+      </else>
+    </choose>
+    <text variable="year-suffix"/>
+  </macro>
+  <macro name="stelle">
+    <choose>
+      <if locator="section" type="legislation" match="all">
+        <label variable="locator" form="symbol" suffix=" "/>
+      </if>
+      <else-if locator="page" match="none">
+        <label variable="locator" form="short" suffix=" "/>
+      </else-if>
+      <else-if is-numeric="locator">
+        <choose>
+          <if type="legislation" match="none">
+            <label variable="locator" form="short" suffix="&#160;"/>
+          </if>
+        </choose>
+      </else-if>
+    </choose>
+    <text variable="locator"/>
+  </macro>
+  <macro name="uebersetzer">
+    <names variable="translator" prefix="übersetzt von ">
+      <name delimiter=", "/>
+    </names>
+  </macro>
+  <macro name="auflage">
+    <choose>
+      <if is-numeric="edition">
+        <text variable="edition" suffix=". Auflage"/>
+      </if>
+      <else>
+        <text variable="edition"/>
+      </else>
+    </choose>
+  </macro>
+  <macro name="ort">
+    <group delimiter=": ">
+      <text variable="publisher-place"/>
+      <text variable="publisher"/>
+    </group>
+  </macro>
+  <macro name="datum">
+    <date variable="issued">
+      <date-part name="day" suffix=". "/>
+      <date-part name="month"/>
+    </date>
+  </macro>
+  <macro name="heft">
+    <group delimiter=" ">
+      <text variable="container-title" font-style="italic"/>
+      <text variable="volume"/>
+      <text variable="issue" prefix="(" suffix=")"/>
+    </group>
+  </macro>
+  <macro name="reihe">
+    <group delimiter=" ">
+      <text variable="collection-title"/>
+      <text variable="collection-number"/>
+    </group>
+  </macro>
+  <!-- Ein Wort nur vor einer Zahl, Kennungen wie „arXiv:1706.03762“ tragen ihren Vorsatz selbst. -->
+  <macro name="nummer">
+    <choose>
+      <if type="report" is-numeric="number" match="all">
+        <text variable="number" prefix="Nr. "/>
+      </if>
+      <else-if type="broadcast" is-numeric="number" match="all">
+        <text variable="number" prefix="Folge "/>
+      </else-if>
+      <else>
+        <text variable="number"/>
+      </else>
+    </choose>
+  </macro>
+  <macro name="netz">
+    <group delimiter=" ">
+      <choose>
+        <if type="personal_communication">
+          <group prefix="[" suffix="]">
+            <!-- Eine gefüllte Gruppe zählt wie ein gefülltes Feld, so bleibt „[E-Mail]“ ohne Empfänger. -->
+            <group>
+              <choose>
+                <if variable="genre">
+                  <text variable="genre"/>
+                </if>
+                <else>
+                  <text value="E-Mail"/>
+                </else>
+              </choose>
+            </group>
+            <names variable="recipient" prefix=" an ">
+              <name delimiter=", "/>
+            </names>
+          </group>
+        </if>
+        <else>
+          <text variable="medium" prefix="[" suffix="]"/>
+        </else>
+      </choose>
+      <choose>
+        <if variable="DOI">
+          <text variable="DOI" prefix="DOI: "/>
+        </if>
+        <else>
+          <text variable="URL" prefix="URL: "/>
+        </else>
+      </choose>
+      <choose>
+        <if variable="URL DOI" match="any">
+          <date variable="accessed" prefix="[Stand: " suffix="]">
+            <date-part name="day" suffix=". "/>
+            <date-part name="month" suffix=" "/>
+            <date-part name="year"/>
+          </date>
+        </if>
+      </choose>
+    </group>
+  </macro>
+  <macro name="rumpf">
+    <choose>
+      <if type="book">
+        <text macro="rumpf-buch"/>
+      </if>
+      <else-if type="chapter entry-dictionary entry-encyclopedia" match="any">
+        <text macro="rumpf-beitrag"/>
+      </else-if>
+      <else-if type="article-journal">
+        <text macro="rumpf-zeitschrift"/>
+      </else-if>
+      <else-if type="article-magazine article-newspaper" match="any">
+        <text macro="rumpf-zeitung"/>
+      </else-if>
+      <else-if type="paper-conference">
+        <text macro="rumpf-konferenz"/>
+      </else-if>
+      <else-if type="report thesis manuscript document article speech" match="any">
+        <text macro="rumpf-bericht"/>
+      </else-if>
+      <else-if type="webpage post-weblog post" match="any">
+        <text macro="rumpf-internet"/>
+      </else-if>
+      <else-if type="motion_picture" variable="URL">
+        <text macro="rumpf-internet"/>
+      </else-if>
+      <else-if type="software dataset" match="any">
+        <text macro="rumpf-software"/>
+      </else-if>
+      <else-if type="graphic song broadcast motion_picture" match="any">
+        <text macro="rumpf-medien"/>
+      </else-if>
+      <else-if type="interview">
+        <text macro="rumpf-interview"/>
+      </else-if>
+      <else-if type="patent">
+        <text macro="rumpf-patent"/>
+      </else-if>
+      <else-if type="legal_case">
+        <text macro="rumpf-urteil"/>
+      </else-if>
+      <else-if type="legislation">
+        <text macro="rumpf-gesetz"/>
+      </else-if>
+      <else>
+        <text macro="rumpf-sonstiges"/>
+      </else>
+    </choose>
+  </macro>
+  <macro name="rumpf-buch">
+    <group delimiter=", ">
+      <text variable="title"/>
+      <text macro="uebersetzer"/>
+      <names variable="editor" prefix="hg. von ">
+        <name delimiter=", "/>
+      </names>
+      <text macro="reihe"/>
+      <choose>
+        <if variable="volume">
+          <text variable="volume" prefix="Band "/>
+        </if>
+        <else>
+          <text variable="number-of-volumes" suffix=" Bände"/>
+        </else>
+      </choose>
+      <text macro="auflage"/>
+      <text macro="ort"/>
+      <text variable="ISBN" prefix="ISBN "/>
+    </group>
+  </macro>
+  <macro name="rumpf-beitrag">
+    <group delimiter=", ">
+      <text variable="title"/>
+      <group delimiter=": " prefix="in ">
+        <text macro="herausgeber"/>
+        <text variable="container-title" font-style="italic"/>
+      </group>
+      <text macro="uebersetzer"/>
+      <text macro="reihe"/>
+      <text variable="volume" prefix="Band "/>
+      <text macro="auflage"/>
+      <text macro="ort"/>
+      <text variable="page"/>
+      <text variable="ISBN" prefix="ISBN "/>
+    </group>
+  </macro>
+  <macro name="rumpf-zeitschrift">
+    <group delimiter=", ">
+      <group delimiter=". ">
+        <text variable="title"/>
+        <text macro="heft"/>
+      </group>
+      <text variable="page"/>
+    </group>
+  </macro>
+  <macro name="rumpf-zeitung">
+    <group delimiter=", ">
+      <text variable="title"/>
+      <text macro="heft"/>
+      <text variable="publisher-place"/>
+      <text macro="auflage"/>
+      <text macro="datum"/>
+      <text variable="page"/>
+    </group>
+  </macro>
+  <macro name="rumpf-konferenz">
+    <group delimiter=", ">
+      <text variable="title" font-style="italic"/>
+      <group delimiter=": " prefix="in ">
+        <text macro="herausgeber"/>
+        <choose>
+          <if variable="container-title">
+            <text variable="container-title"/>
+          </if>
+          <else>
+            <text variable="event-title"/>
+          </else>
+        </choose>
+      </group>
+      <text macro="reihe"/>
+      <text variable="volume" prefix="Band "/>
+      <text macro="ort"/>
+      <text variable="page"/>
+      <text variable="ISBN" prefix="ISBN "/>
+    </group>
+  </macro>
+  <macro name="rumpf-bericht">
+    <group delimiter=", ">
+      <text variable="title" font-style="italic"/>
+      <group delimiter=" ">
+        <text variable="genre"/>
+        <text macro="nummer"/>
+      </group>
+      <text variable="event-title"/>
+      <text variable="publisher"/>
+      <text variable="event-place"/>
+      <text variable="publisher-place"/>
+      <choose>
+        <if type="speech">
+          <text macro="datum"/>
+        </if>
+      </choose>
+    </group>
+  </macro>
+  <macro name="rumpf-internet">
+    <!-- Als Gruppe, denn Zotero lässt nur deren Suffix hinter „?“ und „!“ im kursiven Titel weg. -->
+    <group suffix=".">
+      <text variable="title" font-style="italic"/>
+    </group>
+    <group delimiter=", " prefix=" ">
+      <text variable="container-title"/>
+      <text variable="publisher"/>
+      <text macro="datum"/>
+    </group>
+  </macro>
+  <macro name="rumpf-software">
+    <group delimiter=", ">
+      <text variable="title" font-style="italic"/>
+      <text variable="version" prefix="Version "/>
+      <text macro="ort"/>
+      <text macro="datum"/>
+      <text variable="number"/>
+      <text variable="ISBN" prefix="ISBN "/>
+    </group>
+  </macro>
+  <macro name="rumpf-medien">
+    <group delimiter=", ">
+      <text variable="title" font-style="italic"/>
+      <text variable="container-title"/>
+      <choose>
+        <if type="graphic">
+          <text variable="archive"/>
+        </if>
+      </choose>
+      <text variable="collection-title"/>
+      <text variable="publisher"/>
+      <text variable="publisher-place"/>
+      <text variable="event-place"/>
+      <text macro="nummer"/>
+      <choose>
+        <if type="broadcast">
+          <text macro="datum"/>
+        </if>
+      </choose>
+    </group>
+  </macro>
+  <macro name="rumpf-interview">
+    <!-- Als Gruppe wie in rumpf-internet. -->
+    <group suffix=". ">
+      <text variable="title" font-style="italic"/>
+    </group>
+    <text value="Interview"/>
+    <names variable="interviewer" prefix=" mit ">
+      <name delimiter=", "/>
+    </names>
+    <text variable="publisher" prefix=", "/>
+    <group delimiter=", " prefix=". ">
+      <text variable="publisher-place"/>
+      <text macro="datum"/>
+    </group>
+  </macro>
+  <macro name="rumpf-patent">
+    <group delimiter=", ">
+      <text variable="title" font-style="italic"/>
+      <text variable="number"/>
+      <text variable="authority"/>
+      <text variable="publisher-place"/>
+      <text macro="datum"/>
+    </group>
+  </macro>
+  <macro name="rumpf-urteil">
+    <group delimiter=", ">
+      <text variable="title" font-style="italic"/>
+      <text variable="authority"/>
+      <text variable="number"/>
+      <group delimiter=" ">
+        <text variable="container-title"/>
+        <text variable="volume"/>
+      </group>
+      <text variable="page"/>
+      <text macro="datum"/>
+    </group>
+  </macro>
+  <macro name="rumpf-gesetz">
+    <group delimiter=". ">
+      <text variable="references" prefix="[" suffix="]"/>
+      <group delimiter=", ">
+        <group delimiter=" ">
+          <text variable="container-title"/>
+          <text variable="volume"/>
+        </group>
+        <text macro="auflage"/>
+        <text macro="ort"/>
+        <text variable="page"/>
+      </group>
+    </group>
+  </macro>
+  <macro name="rumpf-sonstiges">
+    <group delimiter=", ">
+      <!-- Eine Norm ohne Nummer und Kurztitel trägt den Titel schon im Kopf. -->
+      <choose>
+        <if type="standard" match="none">
+          <text variable="title" font-style="italic"/>
+        </if>
+        <else-if variable="number title-short" match="any">
+          <text variable="title" font-style="italic"/>
+        </else-if>
+      </choose>
+      <text variable="container-title"/>
+      <choose>
+        <if type="bill">
+          <text variable="number"/>
+        </if>
+      </choose>
+      <text macro="uebersetzer"/>
+      <text macro="auflage"/>
+      <group delimiter=" ">
+        <text variable="volume" prefix="Band "/>
+        <text variable="issue" prefix="(" suffix=")"/>
+      </group>
+      <text macro="ort"/>
+      <text macro="datum"/>
+      <text variable="page"/>
+      <text variable="ISBN" prefix="ISBN "/>
+    </group>
+  </macro>
+  <citation name-form="short" disambiguate-add-year-suffix="true">
+    <layout delimiter="; ">
+      <choose>
+        <if type="legislation">
+          <text macro="stelle" suffix=" "/>
+          <text macro="kurztitel"/>
+          <text macro="jahr" prefix=" "/>
+        </if>
+        <else>
+          <!-- Das Leerzeichen entfällt mit dem Verfasser, wenn Zotero ihn unterdrückt. -->
+          <text macro="kopf" suffix=" "/>
+          <text macro="jahr"/>
+          <text macro="stelle" prefix=", "/>
+        </else>
+      </choose>
+    </layout>
+  </citation>
+  <bibliography name-delimiter="; " hanging-indent="true" entry-spacing="0">
+    <sort>
+      <!-- Ungekürzt, denn beim Sortieren entfällt „et al.“. -->
+      <key macro="kopf" names-min="100"/>
+      <key macro="jahr"/>
+      <key variable="title"/>
+    </sort>
+    <layout>
+      <text macro="kopf"/>
+      <text macro="jahr" prefix=" " suffix="."/>
+      <text macro="rumpf" prefix=" " suffix="."/>
+      <text macro="netz" prefix=" " suffix="."/>
+      <choose>
+        <!-- Bei anderen Typen trägt Extra oft Importdaten wie die PMID. -->
+        <if type="interview report thesis document manuscript speech personal_communication" match="any">
+          <text variable="note" prefix=" (" suffix=")"/>
+        </if>
+      </choose>
+    </layout>
+  </bibliography>
+</style>

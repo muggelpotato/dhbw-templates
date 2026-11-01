@@ -1,0 +1,84 @@
+# Tipps und Platzhalter
+# Diese Datei enthält die Platzhalter der Vorlage, auch die Tipps in den Kapiteln.
+
+# Texte der Angaben
+[text.platzhalter]
+titel = 'Titel der Arbeit, Untertitel nach Doppelpunkt'
+art = 'Art der Arbeit wählen'
+abschluss = 'Abschluss wählen'
+studiengang = 'Studiengang wählen'
+verfasser = 'Vorname Nachname, mehrere durch Komma getrennt'
+abgabedatum = 'Abgabedatum wählen'
+ort = 'Ort'
+datum = 'Datum wählen'
+arbeitsform = 'Einzel- oder Gruppenarbeit wählen'
+kurs = 'Kurskürzel'
+firma = 'Firma'
+firmenort = 'Stadt'
+betreuerfirma = 'Titel Vorname Nachname'
+betreuerhochschule = 'Titel Vorname Nachname'
+anschrift = 'Straße Nr., PLZ Ort, Land'
+telefon = 'Telefon'
+email = 'E-Mail'
+unternehmensdatum = 'Datum wählen'
+
+# Texte des Titelblatts
+sperrvermerk = 'Ohne Sperrvermerk Feld löschen, auch den Sperrvermerk auf Seite IV'
+sperrhinweis = '(ohne Sperrvermerk löschen)'
+
+# Ehrenwörtliche Erklärung und Umfang
+umfang = 'Seitenzahl des Textteils nach Vorgabe des Studiengangs, in der WI ohne Abbildungen und Tabellen'
+
+# Sperrvermerk-Seite
+sperrklausel = 'Ohne Sperrvermerk dieses leere Feld an seinem Titel anklicken und mit Entf löschen, ebenso das rote Wort auf dem Titelblatt.'
+
+# Kurzfassung
+kurzfassung = 'Problem, Methoden, Technologien und Ergebnisse der Arbeit im Präsens. Höchstens eine Seite, ohne Überblick über die Kapitel.'
+
+# Verzeichnisse
+abkuerzungkuerzel = 'Kürzel'
+abkuerzungoptional = 'Optional'
+abkuerzunglangform = 'Langform, alle Abkürzungen außer trivialen wie „z. B.“'
+abkuerzunghinweis = '{stichwort:Alphabetisch sortieren:} in die Tabelle klicken und unter `{oberflaeche.sortieren}` `{oberflaeche.sortiernach}` wählen.'
+abkuerzungzeile = '{stichwort:Neue Zeile:} in der letzten Zelle `Tab` drücken.'
+tippvorgaben = '{stichwort:Vorgaben:} Die genauen Anforderungen an Form und Stil legt die wissenschaftliche Betreuung fest, nicht diese Vorlage. Vorlage und Tipps folgen der Richtlinie des SZI für Informatik und Wirtschaftsinformatik, Stand 17.05.2020. Andere Studiengänge haben meist eigene Richtlinien, die Vorrang haben.'
+tippaktualisieren = '{stichwort:Aktualisieren:} `Strg+A` und `F9` drücken, je Verzeichnis `{oberflaeche.verzeichnisganz}` wählen, von Hand gesetzte Formatierungen darin gehen verloren.'
+tippexport = '{stichwort:Schlussredaktion:} Vor Kapitel 1 stehen römische Seitenzahlen, im Text arabische, ab dem Quellenverzeichnis wieder römische, die Word nicht selbst weiterzählt. In die Überschrift „Quellenverzeichnis“ klicken und unter `{oberflaeche.seitenzahlbeginn}` die Folgezahl eintragen. Nach dem letzten `F9` nach „{oberflaeche.fehlertext}“ suchen, dann über `{oberflaeche.pdfexport}` mit `{oberflaeche.pdflesezeichen}` speichern.'
+
+# Steuerelemente der Muster
+abbildungstitel = 'Beschriftung der Abbildung'
+tabellentitel = 'Beschriftung der Tabelle'
+abbildungsquelle = 'eigene Darstellung in Anlehnung an Nachname 2026, S. 12, Abb. 3'
+tabellenquelle = 'eigene Darstellung in Anlehnung an Nachname 2026, S. 12, Tab. 3'
+zellekopf = 'Spaltenkopf'
+zelletext = 'Text links'
+zellezahl = 'Zahl zentriert'
+blockzitat = 'Wörtliches Zitat mit [eigener Ergänzung] und Auslassung […].'
+fussnotezitat = 'Nachname 2026, S. 12'
+
+# Tipps in den Kapiteln
+tippquerverweis = '{stichwort:Querverweis:} `{oberflaeche.querverweis}` mit `{oberflaeche.verweistyp}` „Abbildung“ und `{oberflaeche.nurnummer}` setzt Verweise wie „Abbildung 1“. Anders als getippte Nummern stimmen sie nach `Strg+A` und `F9` auch, wenn Abbildungen oder Tabellen wandern oder hinzukommen.'
+tippabbildung = '{stichwort:Abbildung:} Die folgende Abbildung lässt sich samt Beschriftung kopieren. Ein Klick auf das Bildsymbol fügt das Bild ein, `{oberflaeche.bildaendern}` ersetzt es.'
+tippbeschriftung = '{stichwort:Beschriftung:} Von Hand eingefügte Bilder und Tabellen beschriftet `{oberflaeche.beschriftungeinfuegen}` mit `{oberflaeche.bezeichnung}` „Abbildung“ oder „Tabelle“. Fehlen sie in der Liste, einmal über `{oberflaeche.neuebezeichnung}` anlegen. Danach im Text `:` und `Tab` tippen, dann den Titel. Nur so steht er bündig wie im Muster.'
+tippquelle = '{stichwort:Quelle in der Beschriftung:} Damit sie im Verzeichnis fehlt, erst direkt hinter dem Titel `Enter` drücken, dann in der oberen Zeile `Strg+Alt+Enter`.'
+tippueberschriften = '{stichwort:Überschriften:} Die Richtlinie des SZI rät zu höchstens drei Ebenen bis 1.1.1 und verlangt zu 1.1.1 auch ein 1.1.2 (S. 23). Titel nennen den Inhalt, etwa „Ist-Analyse des Einkaufs“ statt „Ist-Analyse“ (S. 23). Die Richtlinie verbietet Fragen als Titel (S. 3). Zwischen Überschrift und erstem Unterkapitel darf kein Text stehen. `{oberflaeche.navigationsbereich}` listet alle Überschriften, ein Klick springt dorthin.'
+tipptabelle = '{stichwort:Tabelle:} Die folgende Tabelle lässt sich samt Beschriftung kopieren. Ihre Zeilen bleiben beim Seitenumbruch ganz, die erste wiederholt sich auf Folgeseiten. Beides lässt sich für markierte Zeilen unter `{oberflaeche.zeileneigenschaften}` ändern.'
+tippbindung = '{stichwort:Tabelle zusammenhalten:} Trennt ein Seitenumbruch die Tabelle von ihrer Beschriftung, die letzte Tabellenzeile markieren. Für eine Tabelle in einem Stück stattdessen `{oberflaeche.tabelleauswaehlen}` wählen. Dann `{oberflaeche.nichttrennen}` setzen.'
+tippspaltenbreite = '{stichwort:Spaltenbreite:} Nach gelöschten Spalten bringt `{oberflaeche.fensteranpassen}` die Tabelle auf Textbreite, danach `{oberflaeche.festebreite}` wählen. Breiten für die kürzeste Tabelle kann ein KI-Agent aus ihrem Inhalt berechnen, einzutragen unter `{oberflaeche.zellenbreite}`.'
+tippfussnote = '→ Beleg ohne „Vgl.“'
+tippebenda = '{stichwort:Ebenda:} Die Richtlinie des SZI nennt „Ebd.“ nicht und verlangt im Kurzbeleg Name, Jahr und Seite (S. 14). Ein voller Beleg ist darum immer richtig. „Ebd.“ steht nur direkt nach einer Fußnote mit allein dieser Quelle, nie in der ersten Fußnote einer Seite. Dorthin gerät es leicht, wenn sich Text verschiebt.'
+ebdvoll = 'Sinngemäßes Zitat.'
+ebdseite = 'Sinngemäßes Zitat aus derselben Quelle.'
+fussnoteebdvoll = 'Vgl. Nachname 2026, S. 12'
+fussnoteebdseite = 'Vgl. ebd., S. 14'
+tippkapitel = '{stichwort:Neues Kapitel:} Am Ende des letzten Kapitels oder am Anfang einer Kapitelüberschrift `{oberflaeche.naechsteseite}` wählen. Den Titel auf die neue, leere Seite in `{oberflaeche.ueberschrift1}` tippen. Ohne `{oberflaeche.naechsteseitekurz}` zeigt die erste Kapitelseite eine Kopfzeile.'
+tippfazit = '{stichwort:Schluss:} Für Projekt- und Bachelorarbeiten verlangt die Richtlinie des SZI im letzten Kapitel Zusammenfassung, kritische Reflexion und Ausblick (S. 13). Es greift die Ziele aus Kapitel 1 auf und zeigt, wie weit sie erreicht sind (S. 7).'
+tippzeichen = '{stichwort:Verborgene Zeichen:} `{oberflaeche.allesanzeigen}` zeigt Leerzeichen, Absatzmarken, Abschnittswechsel und Formatvorlagentrennzeichen. Geschützte Leerzeichen aus `Strg+Umschalt+Leertaste` halten etwa „z. B.“ in einer Zeile. Geht beim Löschen ungewollt ein Abschnittswechsel mit, holt `Strg+Z` ihn zurück, sonst verrutschen Seitenzahlen und Kopfzeilen.'
+unterkapitel = 'Text des Unterkapitels'
+
+# Anlagen und Anlagenverzeichnis
+anlagetitel = 'Titel der Anlage'
+anlagetext = '{stichwort:Anlage:} Für eine neue Anlage den Titel tippen und unter `{oberflaeche.formatvorlagen}` `Anlagentitel` wählen. Soll sie oben auf einer neuen Seite beginnen, am Ende der Anlage davor `Strg+Enter` drücken.'
+
+# Tipp zum Beleg und Musterquelle
+tippbeleg = '{stichwort:Beleg:} `{oberflaeche.fussnote}` oder `Strg+Alt+F` setzt eine Fußnote. Darin setzt `{oberflaeche.zitat}` den Beleg. Die Seite lässt sich ohne „S.“ unter `{oberflaeche.zitatseiten}` eintragen. Die Richtlinie des SZI verbietet „f.“ und „ff.“ hinter der Seitenzahl (S. 18). Nicht zitierfähig sind zum Beispiel Wikipedia, Werbebroschüren von Softwareherstellern (S. 18) und KI-Antworten (KI-Leitlinien S. 1).'

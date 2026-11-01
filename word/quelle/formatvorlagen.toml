@@ -1,0 +1,634 @@
+# Formatvorlagen
+# Diese Datei führt den Bestand der Formatvorlagen und nennt, worin jede von ihrer Basis abweicht.
+
+[bestand.formatvorlagen]
+Normal = { name = 'Normal', art = 'Absatz' }
+DefaultParagraphFont = { name = 'Default Paragraph Font', art = 'Zeichen' }
+NoList = { name = 'No List', art = 'Liste' }
+Heading1 = { name = 'heading 1', art = 'Absatz' }
+Heading2 = { name = 'heading 2', art = 'Absatz' }
+Heading3 = { name = 'heading 3', art = 'Absatz' }
+Heading4 = { name = 'heading 4', art = 'Absatz' }
+Gliederung = { name = 'Gliederung', art = 'Liste' }
+'ÜberschriftohneNummer' = { name = 'Überschrift ohne Nummer', art = 'Absatz' }
+ListParagraph = { name = 'List Paragraph', art = 'Absatz' }
+Quote = { name = 'Quote', art = 'Absatz' }
+Code = { name = 'Code', art = 'Absatz' }
+Klickfolge = { name = 'Klickfolge', art = 'Zeichen' }
+TippStichwort = { name = 'Tipp Stichwort', art = 'Zeichen' }
+Hyperlink = { name = 'Hyperlink', art = 'Zeichen' }
+Header = { name = 'header', art = 'Absatz' }
+Footer = { name = 'footer', art = 'Absatz' }
+KopfzeilemitLinie = { name = 'Kopfzeile mit Linie', art = 'Absatz' }
+'FußzeilemitLinie' = { name = 'Fußzeile mit Linie', art = 'Absatz' }
+PlaceholderText = { name = 'Placeholder Text', art = 'Zeichen' }
+Title = { name = 'Title', art = 'Absatz' }
+Subtitle = { name = 'Subtitle', art = 'Absatz' }
+DeckblattText = { name = 'Deckblatt Text', art = 'Absatz' }
+DeckblattSperrvermerk = { name = 'Deckblatt Sperrvermerk', art = 'Zeichen' }
+DeckblattAbstand = { name = 'Deckblatt Abstand', art = 'Absatz' }
+DeckblattTabelle = { name = 'Deckblatt Tabelle', art = 'Absatz' }
+FormularTitel = { name = 'Formular Titel', art = 'Absatz' }
+FormularSperrvermerktitel = { name = 'Formular Sperrvermerktitel', art = 'Absatz' }
+FormularOrtundDatum = { name = 'Formular Ort und Datum', art = 'Absatz' }
+FormularUnterschrift = { name = 'Formular Unterschrift', art = 'Absatz' }
+FormularHinweistitel = { name = 'Formular Hinweistitel', art = 'Absatz' }
+FormularKontakt = { name = 'Formular Kontakt', art = 'Absatz' }
+Strong = { name = 'Strong', art = 'Zeichen' }
+TOC1 = { name = 'toc 1', art = 'Absatz' }
+TOC2 = { name = 'toc 2', art = 'Absatz' }
+TOC3 = { name = 'toc 3', art = 'Absatz' }
+TableofFigures = { name = 'table of figures', art = 'Absatz' }
+'Abkürzung' = { name = 'Abkürzung', art = 'Absatz' }
+Bibliography = { name = 'Bibliography', art = 'Absatz' }
+Caption = { name = 'caption', art = 'Absatz' }
+Abbildung = { name = 'Abbildung', art = 'Absatz' }
+Tabellentext = { name = 'Tabellentext', art = 'Absatz' }
+Tabellentextzentriert = { name = 'Tabellentext zentriert', art = 'Absatz' }
+TableNormal = { name = 'Normal Table', art = 'Tabelle' }
+Tabelle = { name = 'Tabelle', art = 'Tabelle' }
+FootnoteText = { name = 'footnote text', art = 'verknüpft' }
+FootnoteTextChar = { name = 'Footnote Text Char', art = 'Zeichen' }
+FootnoteReference = { name = 'footnote reference', art = 'Zeichen' }
+Anlagentitel = { name = 'Anlagentitel', art = 'Absatz' }
+AnlagenverzeichnisTitel = { name = 'Anlagenverzeichnis Titel', art = 'Absatz' }
+FormularKIHinweissatz = { name = 'Formular KI Hinweissatz', art = 'Absatz' }
+
+# Text und Zeichen
+[stil.Normal]
+basis = ''
+schriftgroesse = '12 pt'
+absatzkontrolle = 'ja'
+galerie = 'ja'
+
+[stil.DefaultParagraphFont]
+basis = ''
+prioritaet = '1'
+ausgeblendet = 'ja'
+
+[stil.Hyperlink]
+basis = 'DefaultParagraphFont'
+unterstrichen = 'ja'
+farbe = '0563C1'
+prioritaet = '99'
+ausgeblendet = 'immer'
+
+[stil.Klickfolge]
+basis = 'PlaceholderText'
+schriftart = 'Courier New'
+schattierung = 'F2F2F2'
+rechtschreibung = 'nein'
+galerie = 'nein'
+prioritaet = '99'
+ausgeblendet = 'immer'
+
+[stil.TippStichwort]
+basis = 'PlaceholderText'
+fett = 'ja'
+kapitaelchen = 'ja'
+galerie = 'nein'
+prioritaet = '99'
+ausgeblendet = 'immer'
+
+# Überschriften
+[stil.Heading1]
+basis = 'Normal'
+folgevorlage = 'Normal'
+schriftart = 'Calibri Light'
+schriftgroesse = '20 pt'
+ausrichtung = 'links'
+silbentrennung = 'nein'
+abstandvor = '6 pt'
+abstandnach = '12 pt'
+zeilenabstand = '1 Zeile'
+mitnaechstem = 'ja'
+zusammenhalten = 'ja'
+umbruchoberhalb = 'ja'
+gliederungsebene = '1'
+liste = 'Überschriften'
+listenebene = '1'
+nummer = '%1'
+nummernformat = 'arabisch'
+einzuglinks = '1,4 cm'
+erstzeile = '-1,4 cm'
+tabstopps = '1,4 cm links'
+galerie = 'ja'
+prioritaet = '9'
+
+[stil.Heading2]
+basis = 'Normal'
+folgevorlage = 'Normal'
+schriftart = 'Calibri Light'
+schriftgroesse = '14 pt'
+ausrichtung = 'links'
+silbentrennung = 'nein'
+abstandvor = '14 pt'
+abstandnach = '12 pt'
+zeilenabstand = '1 Zeile'
+mitnaechstem = 'ja'
+zusammenhalten = 'ja'
+gliederungsebene = '2'
+liste = 'Überschriften'
+listenebene = '2'
+nummer = '%1.%2'
+nummernformat = 'arabisch'
+einzuglinks = '1,4 cm'
+erstzeile = '-1,4 cm'
+tabstopps = '1,4 cm links'
+galerie = 'ja'
+prioritaet = '9'
+
+[stil.Heading3]
+basis = 'Normal'
+folgevorlage = 'Normal'
+schriftart = 'Calibri Light'
+ausrichtung = 'links'
+silbentrennung = 'nein'
+abstandvor = '12 pt'
+abstandnach = '12 pt'
+zeilenabstand = '1 Zeile'
+mitnaechstem = 'ja'
+zusammenhalten = 'ja'
+gliederungsebene = '3'
+liste = 'Überschriften'
+listenebene = '3'
+nummer = '%1.%2.%3'
+nummernformat = 'arabisch'
+einzuglinks = '1,4 cm'
+erstzeile = '-1,4 cm'
+tabstopps = '1,4 cm links'
+galerie = 'ja'
+prioritaet = '9'
+ausgeblendet = 'nein'
+
+[stil.Heading4]
+basis = 'Heading3'
+folgevorlage = 'Normal'
+gliederungsebene = '4'
+listenebene = '4'
+nummer = '%1.%2.%3.%4'
+nummernformat = 'arabisch'
+einzuglinks = '1,4 cm'
+erstzeile = '-1,4 cm'
+tabstopps = '1,4 cm links'
+galerie = 'nein'
+prioritaet = '9'
+ausgeblendet = 'ja'
+
+[stil.'ÜberschriftohneNummer']
+basis = 'Normal'
+folgevorlage = 'Normal'
+schriftgroesse = '18 pt'
+ausrichtung = 'links'
+silbentrennung = 'nein'
+abstandvor = '18 pt'
+abstandnach = '12 pt'
+gleichohneabstand = 'ja'
+umbruchoberhalb = 'ja'
+gliederungsebene = '1'
+galerie = 'ja'
+prioritaet = '10'
+
+# Listen
+[stil.NoList]
+basis = ''
+prioritaet = '99'
+ausgeblendet = 'ja'
+
+[stil.Gliederung]
+basis = ''
+liste = 'Überschriften'
+prioritaet = '99'
+
+[stil.ListParagraph]
+basis = 'Normal'
+einzuglinks = '1,27 cm'
+gleichohneabstand = 'ja'
+galerie = 'nein'
+prioritaet = '34'
+
+# Zitat und Code
+[stil.Quote]
+basis = 'Normal'
+folgevorlage = 'Normal'
+schriftgroesse = '11 pt'
+einzuglinks = '1 cm'
+einzugrechts = '1 cm'
+galerie = 'ja'
+prioritaet = '23'
+
+[stil.Code]
+basis = 'Normal'
+folgevorlage = 'Code'
+schriftart = 'Courier New'
+rechtschreibung = 'nein'
+ausrichtung = 'links'
+zeilenabstand = '1 Zeile'
+silbentrennung = 'nein'
+galerie = 'ja'
+prioritaet = '37'
+
+# Formatvorlagen von Kopf- und Fußzeile
+[stil.Header]
+basis = 'Normal'
+schriftart = 'Tahoma'
+schriftgroesse = '9 pt'
+zeilenabstand = '1 Zeile'
+ausrichtung = 'rechts'
+silbentrennung = 'nein'
+tabstopps = '8 cm zentriert; 16 cm rechts'
+galerie = 'nein'
+prioritaet = '99'
+ausgeblendet = 'immer'
+
+[stil.Footer]
+basis = 'Normal'
+schriftart = 'Tahoma'
+schriftgroesse = '9 pt'
+zeilenabstand = '1 Zeile'
+ausrichtung = 'links'
+silbentrennung = 'nein'
+tabstopps = '16 cm rechts'
+galerie = 'nein'
+prioritaet = '99'
+ausgeblendet = 'immer'
+
+[stil.KopfzeilemitLinie]
+basis = 'Header'
+rahmenunten = '0,5 pt'
+rahmenabstand = '0 pt'
+galerie = 'nein'
+prioritaet = '99'
+ausgeblendet = 'immer'
+
+[stil.'FußzeilemitLinie']
+basis = 'Footer'
+rahmenoben = '0,5 pt'
+rahmenabstand = '0 pt'
+galerie = 'nein'
+prioritaet = '99'
+ausgeblendet = 'immer'
+
+[stil.Strong]
+basis = 'DefaultParagraphFont'
+fett = 'ja'
+galerie = 'nein'
+prioritaet = '22'
+ausgeblendet = 'immer'
+
+# Formatvorlage der Platzhalter
+[stil.PlaceholderText]
+basis = 'DefaultParagraphFont'
+farbe = 'AA00FF'
+rechtschreibung = 'nein'
+galerie = 'nein'
+ausgeblendet = 'immer'
+prioritaet = '99'
+
+# Formatvorlagen des Titelblatts
+[stil.Title]
+basis = 'Normal'
+folgevorlage = 'Normal'
+schriftart = 'Calibri Light'
+schriftgroesse = '20 pt'
+laufweite = '-0,5 pt'
+unterschneidung = '14 pt'
+ausrichtung = 'zentriert'
+silbentrennung = 'nein'
+abstandvor = '96 pt'
+abstandnach = '44 pt'
+zeilenabstand = '1 Zeile'
+gleichohneabstand = 'ja'
+galerie = 'nein'
+prioritaet = '37'
+ausgeblendet = 'immer'
+
+[stil.Subtitle]
+basis = 'Normal'
+folgevorlage = 'Normal'
+schriftgroesse = '16 pt'
+laufweite = '0,75 pt'
+ausrichtung = 'zentriert'
+silbentrennung = 'nein'
+abstandnach = '24 pt'
+galerie = 'nein'
+prioritaet = '11'
+ausgeblendet = 'immer'
+
+[stil.DeckblattText]
+basis = 'Normal'
+ausrichtung = 'zentriert'
+silbentrennung = 'nein'
+ausgeblendet = 'immer'
+prioritaet = '37'
+
+[stil.DeckblattSperrvermerk]
+basis = 'DefaultParagraphFont'
+schriftgroesse = '20 pt'
+fett = 'ja'
+versalien = 'ja'
+farbe = 'FF0000'
+ausgeblendet = 'immer'
+prioritaet = '37'
+
+[stil.DeckblattAbstand]
+basis = 'DeckblattText'
+abstandnach = '22 pt'
+ausgeblendet = 'immer'
+prioritaet = '37'
+
+[stil.DeckblattTabelle]
+basis = 'Normal'
+ausrichtung = 'links'
+silbentrennung = 'nein'
+zeilenabstand = '1 Zeile'
+abstandnach = '2,4 pt'
+ausgeblendet = 'immer'
+prioritaet = '37'
+
+# Formatvorlagen der Formularseiten
+[stil.FormularTitel]
+basis = 'ÜberschriftohneNummer'
+folgevorlage = 'Normal'
+fett = 'ja'
+ausrichtung = 'zentriert'
+abstandvor = '0 pt'
+abstandnach = '48 pt'
+umbruchoberhalb = 'ja'
+galerie = 'nein'
+prioritaet = '38'
+ausgeblendet = 'immer'
+
+[stil.FormularSperrvermerktitel]
+basis = 'FormularTitel'
+farbe = 'FF0000'
+folgevorlage = 'Normal'
+galerie = 'nein'
+prioritaet = '38'
+ausgeblendet = 'immer'
+
+[stil.FormularHinweistitel]
+basis = 'FormularTitel'
+folgevorlage = 'Normal'
+abstandvor = '88 pt'
+umbruchoberhalb = 'nein'
+galerie = 'nein'
+prioritaet = '38'
+ausgeblendet = 'immer'
+
+[stil.FormularOrtundDatum]
+basis = 'Normal'
+folgevorlage = 'FormularUnterschrift'
+ausrichtung = 'links'
+abstandvor = '66 pt'
+mitnaechstem = 'ja'
+galerie = 'nein'
+prioritaet = '38'
+ausgeblendet = 'immer'
+
+[stil.FormularUnterschrift]
+basis = 'Normal'
+folgevorlage = 'Normal'
+ausrichtung = 'links'
+silbentrennung = 'nein'
+einzugrechts = '7 cm'
+abstandvor = '66 pt'
+abstandnach = '44 pt'
+rahmenoben = '0,5 pt'
+rahmenabstand = '1 pt'
+galerie = 'nein'
+prioritaet = '38'
+ausgeblendet = 'immer'
+
+[stil.FormularKontakt]
+basis = 'Normal'
+folgevorlage = 'FormularKontakt'
+ausrichtung = 'links'
+silbentrennung = 'nein'
+galerie = 'nein'
+prioritaet = '38'
+ausgeblendet = 'immer'
+
+# Formatvorlagen der Verzeichnisse
+[stil.TOC1]
+basis = 'Normal'
+folgevorlage = 'Normal'
+galerie = 'nein'
+prioritaet = '39'
+ausgeblendet = 'immer'
+aktualisieren = 'ja'
+fett = 'ja'
+ausrichtung = 'links'
+silbentrennung = 'nein'
+abstandvor = '14 pt'
+zeilenabstand = '1 Zeile'
+einzuglinks = '1 cm'
+erstzeile = '-1 cm'
+tabstopps = '1 cm links; 14,98 cm rechts'
+
+[stil.TOC2]
+basis = 'Normal'
+folgevorlage = 'Normal'
+galerie = 'nein'
+prioritaet = '39'
+ausgeblendet = 'immer'
+aktualisieren = 'ja'
+ausrichtung = 'links'
+silbentrennung = 'nein'
+abstandvor = '6 pt'
+abstandnach = '6 pt'
+zeilenabstand = '1 Zeile'
+einzuglinks = '1 cm'
+erstzeile = '-1 cm'
+tabstopps = '1 cm links; 14,98 cm rechts'
+
+[stil.TOC3]
+basis = 'Normal'
+folgevorlage = 'Normal'
+galerie = 'nein'
+prioritaet = '39'
+ausgeblendet = 'immer'
+aktualisieren = 'ja'
+ausrichtung = 'links'
+silbentrennung = 'nein'
+einzuglinks = '2,5 cm'
+erstzeile = '-1,5 cm'
+abstandvor = '6 pt'
+abstandnach = '6 pt'
+zeilenabstand = '1 Zeile'
+tabstopps = '2,5 cm links; 14,98 cm rechts'
+
+[stil.TableofFigures]
+basis = 'Normal'
+folgevorlage = 'Normal'
+galerie = 'nein'
+prioritaet = '99'
+ausgeblendet = 'immer'
+ausrichtung = 'links'
+silbentrennung = 'nein'
+einzuglinks = '3 cm'
+erstzeile = '-3 cm'
+einzugrechts = '1 cm'
+abstandvor = '6 pt'
+abstandnach = '6 pt'
+zeilenabstand = '1 Zeile'
+tabstopps = '3 cm links; 14,98 cm rechts Punkte'
+zusammenhalten = 'ja'
+
+[stil.Bibliography]
+basis = 'Normal'
+folgevorlage = 'Normal'
+galerie = 'nein'
+prioritaet = '37'
+ausgeblendet = 'immer'
+ausrichtung = 'links'
+silbentrennung = 'nein'
+einzuglinks = '1 cm'
+erstzeile = '-1 cm'
+zusammenhalten = 'ja'
+
+[stil.'Abkürzung']
+basis = 'Normal'
+folgevorlage = 'Abkürzung'
+galerie = 'nein'
+prioritaet = '39'
+ausrichtung = 'links'
+silbentrennung = 'nein'
+zeilenabstand = '1 Zeile'
+abstandnach = '6 pt'
+zusammenhalten = 'ja'
+
+# Formatvorlagen für Beschriftung und Bild
+[stil.Caption]
+basis = 'Normal'
+folgevorlage = 'Normal'
+ausrichtung = 'links'
+silbentrennung = 'nein'
+einzuglinks = '3 cm'
+erstzeile = '-3 cm'
+tabstopps = '3 cm links'
+abstandnach = '24 pt'
+zeilenabstand = '1 Zeile'
+zusammenhalten = 'ja'
+galerie = 'nein'
+prioritaet = '35'
+
+[stil.Abbildung]
+basis = 'Normal'
+folgevorlage = 'Normal'
+ausrichtung = 'links'
+abstandnach = '6 pt'
+zeilenabstand = '1 Zeile'
+rechtschreibung = 'nein'
+mitnaechstem = 'ja'
+galerie = 'ja'
+prioritaet = '36'
+
+# Tabellen
+[stil.Tabellentext]
+basis = 'Normal'
+ausrichtung = 'links'
+zeilenabstand = '1 Zeile'
+abstandvor = '3 pt'
+abstandnach = '3 pt'
+galerie = 'ja'
+prioritaet = '36'
+
+[stil.Tabellentextzentriert]
+basis = 'Tabellentext'
+ausrichtung = 'zentriert'
+galerie = 'ja'
+prioritaet = '36'
+
+[stil.Tabelle]
+basis = 'TableNormal'
+schriftgroesse = '12 pt'
+ausrichtung = 'links'
+abstandvor = '3 pt'
+abstandnach = '3 pt'
+zeilenabstand = '1 Zeile'
+rahmenoben = '0 pt'
+rahmenunten = '0 pt'
+rahmenlinks = '0 pt'
+rahmenrechts = '0 pt'
+rahmeninnenwaagrecht = '0,5 pt'
+rahmeninnensenkrecht = '0,5 pt'
+rahmenfarbe = 'FFFFFF'
+kopfschattierung = 'CDCBCB'
+kopfzellausrichtung = 'Mitte'
+zeilenumbruch = 'nein'
+fussschattierung = 'CDCBCB'
+erstespalteschattierung = 'DAD8D8'
+erstespalteausrichtung = 'links'
+baenderung = 'ja'
+band1schattierung = 'F2F2F2'
+band2schattierung = 'E6E5E5'
+prioritaet = '99'
+
+[stil.TableNormal]
+basis = ''
+zellenrandoben = '0 cm'
+zellenrandunten = '0 cm'
+zellenrandlinks = '0,19 cm'
+zellenrandrechts = '0,19 cm'
+prioritaet = '99'
+ausgeblendet = 'ja'
+
+# Fußnoten
+[stil.FootnoteText]
+basis = 'Normal'
+schriftgroesse = '10 pt'
+zeilenabstand = '1 Zeile'
+prioritaet = '99'
+ausgeblendet = 'ja'
+
+[stil.FootnoteTextChar]
+basis = 'DefaultParagraphFont'
+schriftgroesse = '10 pt'
+prioritaet = '99'
+ausgeblendet = 'ja'
+
+[stil.FootnoteReference]
+basis = 'DefaultParagraphFont'
+hochgestellt = 'ja'
+prioritaet = '99'
+ausgeblendet = 'ja'
+
+# Formatvorlagen des Anhangs
+[stil.Anlagentitel]
+basis = 'ÜberschriftohneNummer'
+folgevorlage = 'Normal'
+galerie = 'ja'
+prioritaet = '38'
+schriftgroesse = '14 pt'
+liste = 'Anhang'
+listenebene = '1'
+nummer = 'Anhang %1:'
+nummernformat = 'arabisch'
+einzuglinks = '3 cm'
+erstzeile = '-3 cm'
+tabstopps = '3 cm links'
+gliederungsebene = '4'
+mitnaechstem = 'ja'
+umbruchoberhalb = 'nein'
+
+[stil.AnlagenverzeichnisTitel]
+basis = 'ÜberschriftohneNummer'
+schriftgroesse = '14 pt'
+folgevorlage = 'Normal'
+gliederungsebene = 'Textkörper'
+galerie = 'nein'
+prioritaet = '38'
+ausgeblendet = 'immer'
+mitnaechstem = 'ja'
+umbruchoberhalb = 'nein'
+
+[stil.FormularKIHinweissatz]
+basis = 'Normal'
+folgevorlage = 'FormularOrtundDatum'
+abstandvor = '24 pt'
+abstandnach = '66 pt'
+mitnaechstem = 'ja'
+galerie = 'nein'
+prioritaet = '38'
+ausgeblendet = 'immer'

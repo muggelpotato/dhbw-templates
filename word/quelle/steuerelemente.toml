@@ -1,0 +1,296 @@
+# Steuerelemente
+# Diese Datei führt die Angaben mit Speicher und Vorbelegung, dazu alle Steuerelemente.
+
+# Speicher
+[speicher.kern]
+namensraum = 'http://purl.org/dc/elements/1.1/; http://schemas.openxmlformats.org/package/2006/metadata/core-properties'
+wurzel = 'coreProperties'
+praefix = 'ns0; ns1'
+kennung = '{6C3C8BC8-F283-45AE-878A-BAB7291924A1}'
+
+[speicher.xmlteil]
+namensraum = 'urn:dhbw-templates:angaben:1'
+wurzel = 'angaben'
+praefix = 'ns0'
+kennung = '{A47EA0CD-D4EA-40D7-A434-2E2993F16693}'
+
+# Angaben
+[angabe.titel]
+steuerelement = 'Nur-Text'
+xpath = '/ns1:coreProperties[1]/ns0:title[1]'
+vorbelegung = ''
+
+[angabe.art]
+steuerelement = 'Kombinationsfeld'
+xpath = '/ns1:coreProperties[1]/ns0:subject[1]'
+vorbelegung = ''
+
+[angabe.abschluss]
+steuerelement = 'Kombinationsfeld'
+xpath = '/ns0:angaben[1]/ns0:abschluss[1]'
+vorbelegung = ''
+
+[angabe.studiengang]
+steuerelement = 'Kombinationsfeld'
+xpath = '/ns0:angaben[1]/ns0:studiengang[1]'
+vorbelegung = ''
+
+[angabe.verfasser]
+steuerelement = 'Nur-Text'
+xpath = '/ns0:angaben[1]/ns0:verfasser[1]'
+vorbelegung = ''
+
+[angabe.abgabedatum]
+steuerelement = 'Datum'
+xpath = '/ns0:angaben[1]/ns0:abgabedatum[1]'
+datumsformat = 'd. MMMM yyyy'
+sprache = 'de-DE'
+speicherform = 'Datum'
+vorbelegung = ''
+
+[angabe.ort]
+steuerelement = 'Nur-Text'
+xpath = '/ns0:angaben[1]/ns0:ort[1]'
+vorbelegung = ''
+
+[angabe.datum]
+steuerelement = 'Datum'
+xpath = '/ns0:angaben[1]/ns0:datum[1]'
+datumsformat = 'd. MMMM yyyy'
+sprache = 'de-DE'
+speicherform = 'Datum'
+vorbelegung = ''
+
+[angabe.arbeitsform]
+steuerelement = 'Dropdown'
+xpath = '/ns0:angaben[1]/ns0:arbeitsform[1]'
+vorbelegung = ''
+
+[angabe.kurs]
+steuerelement = 'Nur-Text'
+xpath = '/ns0:angaben[1]/ns0:kurs[1]'
+vorbelegung = ''
+
+[angabe.firma]
+steuerelement = 'Nur-Text'
+xpath = '/ns0:angaben[1]/ns0:firma[1]'
+vorbelegung = ''
+
+[angabe.firmenort]
+steuerelement = 'Nur-Text'
+xpath = '/ns0:angaben[1]/ns0:firmenort[1]'
+vorbelegung = ''
+
+[angabe.betreuerfirma]
+steuerelement = 'Nur-Text'
+xpath = '/ns0:angaben[1]/ns0:betreuerfirma[1]'
+vorbelegung = ''
+
+[angabe.betreuerhochschule]
+steuerelement = 'Nur-Text'
+xpath = '/ns0:angaben[1]/ns0:betreuerhochschule[1]'
+vorbelegung = ''
+
+[angabe.anschrift]
+steuerelement = 'Nur-Text'
+xpath = '/ns0:angaben[1]/ns0:anschrift[1]'
+vorbelegung = ''
+
+[angabe.telefon]
+steuerelement = 'Nur-Text'
+xpath = '/ns0:angaben[1]/ns0:telefon[1]'
+vorbelegung = ''
+
+[angabe.email]
+steuerelement = 'Nur-Text'
+xpath = '/ns0:angaben[1]/ns0:email[1]'
+vorbelegung = ''
+
+[angabe.unternehmensdatum]
+steuerelement = 'Datum'
+xpath = '/ns0:angaben[1]/ns0:unternehmensdatum[1]'
+datumsformat = 'd. MMMM yyyy'
+sprache = 'de-DE'
+speicherform = 'Datum'
+vorbelegung = ''
+
+# Steuerelemente der Angaben
+[steuerelement.angaben]
+sperre = 'Löschen'
+stellen = 'titelblatt; kopf; fuss'
+
+[steuerelement.angabenloeschbar]
+stellen = 'titelblatt.angaben; text.arbeitsform.erklaerung1; text.erklaerung.absatz; text.erklaerung.ortdatum; text.erklaerung.unterschrift; text.freigabe.absatz; text.freigabe.ortdatum; text.sperrklausel.ortdatum; text.sperrklausel.unterschrift; text.sperrklausel.kontaktperson; text.sperrklausel.anschrift; text.sperrklausel.telefon; text.sperrklausel.email; text.kierklaerung.ortdatum; text.kierklaerung.unterschrift'
+
+[steuerelement.arbeitsformanzeige]
+platzhaltereintrag = 'ja'
+stellen = 'text.arbeitsform'
+
+# Steuerelemente des Sperrvermerks
+[steuerelement.sperrvermerk]
+sperre = 'keine'
+
+[steuerelement.sperrhinweis]
+art = 'Rich-Text'
+
+# Ehrenwörtliche Erklärung und Umfang
+[steuerelement.umfang]
+art = 'Nur-Text'
+
+# Sperrvermerk-Seite
+[steuerelement.sperrklausel]
+
+# Kurzfassung
+[steuerelement.kurzfassung]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+# Verzeichnisse
+[steuerelement.abkuerzungoptional]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+[steuerelement.abkuerzunglangform]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+[steuerelement.abkuerzunghinweis]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+[steuerelement.abkuerzungzeile]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+[steuerelement.abkuerzungkuerzel]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+[steuerelement.tippvorgaben]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+[steuerelement.tippaktualisieren]
+entfernen = 'ja'
+
+[steuerelement.tippexport]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+# Steuerelemente der Muster
+[steuerelement.bild]
+art = 'Bild'
+breite = '13,65 cm'
+hoehe = '10,29 cm'
+umbruch = 'in Zeile'
+datei = 'bildplatzhalter'
+
+[steuerelement.abbildungstitel]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+[steuerelement.tabellentitel]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+[steuerelement.abbildungsquelle]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+[steuerelement.tabellenquelle]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+[steuerelement.zellekopf]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+[steuerelement.zelletext]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+[steuerelement.zellezahl]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+# Tipps in den Kapiteln
+[steuerelement.zitatblock]
+entfernen = 'ja'
+platzhalter = 'text.textteil.zitat'
+
+[steuerelement.ebdblock]
+entfernen = 'ja'
+platzhalter = 'text.textteil.ebd'
+
+[steuerelement.unterkapitel]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+[steuerelement.tippabbildung]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+[steuerelement.tippbeschriftung]
+entfernen = 'ja'
+
+[steuerelement.tippquelle]
+entfernen = 'ja'
+platzhalter = 'text.textteil.quellbild'
+
+[steuerelement.tippquerverweis]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+[steuerelement.tippueberschriften]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+[steuerelement.tipptabelle]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+[steuerelement.tippbindung]
+entfernen = 'ja'
+
+[steuerelement.tippspaltenbreite]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+[steuerelement.tippkapitel]
+entfernen = 'ja'
+platzhalter = 'text.textteil.kapitelbild'
+
+[steuerelement.tippfazit]
+entfernen = 'ja'
+
+[steuerelement.tippzeichen]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+[steuerelement.tippebenda]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+# Anlagen und Anlagenverzeichnis
+[steuerelement.anlagetitel]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+[steuerelement.anlagetext]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+# KI-Erklärung
+[steuerelement.kikaestchen]
+art = 'Kontrollkästchen'
+
+# Tipp zum Beleg und Musterquelle
+[steuerelement.tippbeleg]
+art = 'Rich-Text'
+entfernen = 'ja'
+
+[speicher.quellen]
+kennung = '{D8F51451-01C9-5FE5-9478-3BA5AD3C7224}'
+stildatei = '\SZI-DHBW-Loerrach.xsl'
+stilname = 'SZI DHBW Lörrach'
+stilversion = '2026'

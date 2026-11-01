@@ -1,0 +1,5 @@
+__pycache__/
+word/*.dotx
+word/quelle/bilder/DHBW_LOE_Drucklogo.jpg
+word/*.toml
+!word/presets.toml

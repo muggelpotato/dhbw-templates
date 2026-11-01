@@ -1,0 +1,30 @@
+# Presets
+# Diese Datei kopieren und befüllen
+# Jeder Schlüssel aus quelle/ lässt sich durch ein preset überschreiben, etwa stil.PlaceholderText.farbe = '0070C0' für Tipps und Platzhalter
+# Eine Formatvorlage kann zusätzlich durch Schlüssel ergänzt werden, die sie in quelle/ nicht hat, vorausgesetzt, eine andere Formatvorlage hat sie, etwa stil.Heading1.farbe = 'C00000' für Überschrift 1
+# Die Schriftart der Vorlage muss bei Bedarf an fünf Stellen geändert werden: dokument.standard.schriftart, stil.Title.schriftart, stil.Heading1.schriftart bis stil.Heading3.schriftart (Kopf und Fuß behalten Tahoma)
+# Siehe die Platzhalter in der Standardvorlage für die erwartete Formatierungen der Felder wie `Titel Vorname Nachname` für angabe.betreuerhochschule.vorbelegung oder `Vorname Nachname, Vorname Nachname` für angabe.autoren.vorbelegung
+
+# Studium
+angabe.abschluss.vorbelegung = ''  # Name wie in [text.auswahl], etwa Bachelor of Science
+angabe.studiengang.vorbelegung = ''  # Name wie in [text.auswahl], etwa Wirtschaftsinformatik
+angabe.kurs.vorbelegung = ''
+angabe.verfasser.vorbelegung = ''  # Vorname Nachname, mehrere durch Komma getrennt
+angabe.arbeitsform.vorbelegung = ''  # Option wie in [text.auswahl], etwa Einzelarbeit oder Gruppenarbeit
+angabe.betreuerhochschule.vorbelegung = ''  # Titel Vorname Nachname
+
+# Unternehmen
+angabe.firma.vorbelegung = ''
+angabe.firmenort.vorbelegung = ''
+angabe.anschrift.vorbelegung = ''  # Straße Nr., PLZ Ort, Land
+angabe.telefon.vorbelegung = ''
+angabe.email.vorbelegung = ''
+angabe.betreuerfirma.vorbelegung = ''  # Titel Vorname Nachname
+datei.firmenlogo.link = ''  # Link zum Logo auf .png oder .jpg, auch file:///C:/Ordner/logo.png
+datei.firmenlogo.zuschnitt = ''  # abgeschnittener Rand in Prozent links; oben; rechts; unten, etwa 5; 5; 5; 5
+
+# Orte und Daten, ein Datum als JJJJ-MM-TT
+angabe.ort.vorbelegung = ''  # Ort der ehrenwörtlichen- und Ki-Erklärung
+angabe.datum.vorbelegung = '' # Datum der ehrenwörtlichen- und Ki-Erklärung
+angabe.abgabedatum.vorbelegung = ''
+angabe.unternehmensdatum.vorbelegung = ''  # Datum von Freigabe und Sperrvermerk

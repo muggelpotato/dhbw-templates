@@ -1,0 +1,210 @@
+# Aufbau
+# Diese Datei legt Titelblatt, Formulare, Verzeichnisse, Beschriftungen, Felder, Muster und Anhang fest.
+
+# Felder in Kopf und Fuß
+[feld.seitenzahl]
+code = 'PAGE'
+
+[feld.kapitelname]
+code = 'STYLEREF 1'
+
+# Elemente des Titelblatts
+[titelblatt.titel]
+position = '1'
+inhalt = '{angabe.titel}'
+stil = 'Title'
+
+[titelblatt.art]
+position = '2'
+inhalt = '{angabe.art}'
+stil = 'Subtitle'
+
+[titelblatt.sperrvermerk]
+position = '3'
+inhalt = '{text.titelblatt.sperrvermerk} {steuerelement.sperrhinweis}'
+stil = 'DeckblattAbstand'
+huelle = 'sperrvermerk'
+zeichenstil = 'DeckblattSperrvermerk'
+
+[titelblatt.pruefung]
+position = '4'
+inhalt = 'text.titelblatt.pruefung'
+stil = 'DeckblattText'
+bilder = 'dhbwlogo; firmenlogo'
+
+[titelblatt.abschluss]
+position = '5'
+inhalt = '{angabe.abschluss}'
+stil = 'DeckblattAbstand'
+
+[titelblatt.studiengang]
+position = '6'
+inhalt = 'text.titelblatt.studiengang'
+stil = 'DeckblattText'
+
+[titelblatt.an]
+position = '7'
+inhalt = 'text.titelblatt.an'
+stil = 'DeckblattText'
+
+[titelblatt.hochschule]
+position = '8'
+inhalt = 'text.titelblatt.hochschule'
+stil = 'DeckblattAbstand'
+
+[titelblatt.verfasser]
+position = '9'
+inhalt = '{angabe.verfasser}'
+stil = 'DeckblattAbstand'
+
+[titelblatt.abgabedatum]
+position = '10'
+inhalt = '{angabe.abgabedatum}'
+stil = 'DeckblattText'
+
+[titelblatt.angaben]
+inhalt = 'text.titelblatt.kurs; {angabe.kurs}; text.titelblatt.firma; {angabe.firma}, {angabe.firmenort}; text.titelblatt.betreuerfirma; {angabe.betreuerfirma}; text.titelblatt.betreuerhochschule; {angabe.betreuerhochschule}'
+stil = 'DeckblattTabelle'
+spaltenbreiten = '6,5 cm; 6,5 cm'
+tabellenstil = 'TableNormal'
+vor = 'abgabedatum'
+lage = 'unten'
+tabellenausrichtung = 'zentriert'
+
+# Logos
+[titelblatt.firmenlogo]
+datei = 'firmenplatzhalter'
+logo = 'firmenlogo'
+alternativtext = 'nein'
+breite = '5,1 cm'
+hoehe = '2,86 cm'
+links = '3 cm'
+oben = '0,66 cm'
+umbruch = 'vor dem Text'
+
+[titelblatt.dhbwlogo]
+datei = 'dhbwplatzhalter'
+logo = 'dhbwlogo'
+alternativtext = 'ja'
+breite = '5,1 cm'
+hoehe = '2,86 cm'
+links = '12,9 cm'
+oben = '0,66 cm'
+umbruch = 'hinter dem Text'
+
+# Ehrenwörtliche Erklärung und Umfang
+[formular.erklaerung]
+inhalt = 'text.erklaerung.ueberschrift; text.erklaerung.absatz; text.erklaerung.ortdatum; text.erklaerung.unterschrift'
+stile = 'FormularTitel; Normal; FormularOrtundDatum; FormularUnterschrift'
+
+[formular.umfang]
+inhalt = 'text.umfang.ueberschrift; text.umfang.absatz'
+stile = 'FormularHinweistitel; Normal'
+
+# Freigabe
+[formular.freigabe]
+inhalt = 'text.freigabe.ueberschrift; text.freigabe.absatz; text.freigabe.ortdatum; text.freigabe.unterschrift'
+stile = 'FormularTitel; Normal; FormularOrtundDatum; FormularUnterschrift'
+
+# Sperrvermerk-Seite
+[formular.sperrklausel]
+inhalt = 'text.sperrklausel.ueberschrift; text.sperrklausel.absatz; text.sperrklausel.ortdatum; text.sperrklausel.unterschrift; text.sperrklausel.kontakt; text.sperrklausel.kontaktperson; text.sperrklausel.anschrift; text.sperrklausel.telefon; text.sperrklausel.email'
+stile = 'FormularSperrvermerktitel; Normal; FormularOrtundDatum; FormularUnterschrift; FormularKontakt; FormularKontakt; FormularKontakt; FormularKontakt; FormularKontakt'
+huelle = 'sperrklausel'
+
+# Kurzfassung
+[formular.kurzfassung]
+inhalt = 'text.kurzfassung.ueberschrift; {steuerelement.kurzfassung}'
+stile = 'ÜberschriftohneNummer; Normal'
+
+# Verzeichnisse, mit feld als Feld, sonst als Tabelle
+[verzeichnis.inhalt]
+feld = 'TOC \o "1-3" \h \z \u'
+muster = 'muster.tippvorgaben'
+
+[verzeichnis.abkuerzungen]
+eintragsstil = 'Abkürzung'
+tabellenstil = 'TableNormal'
+spaltenbreiten = '2,5 cm; 12,5 cm'
+zellenrandlinks = '0 cm'
+zellenrandrechts = '0,1 cm'
+inhalt = '{steuerelement.abkuerzungkuerzel}; {steuerelement.abkuerzungoptional}; {steuerelement.abkuerzungkuerzel}; {steuerelement.abkuerzunglangform}; {steuerelement.abkuerzungkuerzel}; {steuerelement.abkuerzunghinweis}; {steuerelement.abkuerzungkuerzel}; {steuerelement.abkuerzungzeile}'
+
+[verzeichnis.abbildungen]
+feld = 'TOC \h \z \c "Abbildung" \w'
+
+[verzeichnis.tabellen]
+feld = 'TOC \h \z \c "Tabelle" \w'
+
+[verzeichnis.quellen]
+feld = 'BIBLIOGRAPHY \l 1031'
+eintragsstil = 'Bibliography'
+muster = 'steuerelement.tippaktualisieren; muster.tippexport'
+
+# Beschriftungen
+[beschriftung.abbildung]
+lage = 'unter'
+quelle = 'ja'
+stil = 'Caption'
+
+[beschriftung.tabelle]
+lage = 'unter'
+quelle = 'ja'
+stil = 'Caption'
+
+# Felder der Beschriftungen
+[feld.abbildung]
+code = 'SEQ Abbildung \* ARABIC'
+
+[feld.tabelle]
+code = 'SEQ Tabelle \* ARABIC'
+
+# Musterabbildung und Mustertabelle
+[muster.abbildung]
+stil = 'Abbildung'
+
+[muster.tabelle]
+inhalt = '{steuerelement.zellekopf}; {steuerelement.zellekopf}; {steuerelement.zellekopf}; {steuerelement.zellekopf}; {steuerelement.zelletext}; {steuerelement.zellezahl}; {steuerelement.zellezahl}; {steuerelement.zellezahl}; {steuerelement.zelletext}; {steuerelement.zellezahl}; {steuerelement.zellezahl}; {steuerelement.zellezahl}'
+stile = 'Tabellentextzentriert; Tabellentextzentriert; Tabellentextzentriert; Tabellentextzentriert; Tabellentext; Tabellentextzentriert; Tabellentextzentriert; Tabellentextzentriert; Tabellentext; Tabellentextzentriert; Tabellentextzentriert; Tabellentextzentriert'
+spaltenbreiten = '3,75 cm; 3,75 cm; 3,75 cm; 3,75 cm'
+tabellenstil = 'Tabelle'
+kopfwiederholen = 'ja'
+
+# Tipps in den Kapiteln
+[muster.fussnote]
+strichlaenge = '144 pt'
+strichstaerke = '0,75 pt'
+strichabstand = '6 pt; 5,4 pt'
+strichausgleich = '1,44 pt'
+strichhoehe = '1 pt'
+
+[muster.quellbild]
+strichlaenge = '164 pt'
+pfeileinzug = '2,42 cm'
+
+# Aufbau des Anhangs
+[anhang.ueberschrift]
+inhalt = 'text.anhang.ueberschrift'
+stile = 'ÜberschriftohneNummer'
+
+[anhang.musteranlage]
+inhalt = '{steuerelement.anlagetitel}; {steuerelement.anlagetext}'
+stile = 'Anlagentitel; Normal'
+
+# Anlagen und Anlagenverzeichnis
+[verzeichnis.anlagen]
+feld = 'TOC \h \z \t "Anlagentitel" \c'
+titelstil = 'AnlagenverzeichnisTitel'
+
+# KI-Erklärung
+[formular.kierklaerung]
+inhalt = '{seitenumbruch}; text.kierklaerung.ueberschrift; text.kierklaerung.einleitung; text.kierklaerung.punkt1; text.kierklaerung.punkt2; text.kierklaerung.punkt3; text.kierklaerung.ueberleitung; formular.kitabelle; text.kierklaerung.hinweis; text.kierklaerung.ortdatum; text.kierklaerung.unterschrift'
+stile = 'Normal; Anlagentitel; Normal; ListParagraph; ListParagraph; ListParagraph; Normal; Tabellentext; FormularKIHinweissatz; FormularOrtundDatum; FormularUnterschrift'
+
+[formular.kitabelle]
+kopf = 'text.kierklaerung.spalten'
+zeilen = 'text.kierklaerung.zeilen'
+spaltenbreiten = '5 cm; 3,5 cm; 7,5 cm'
+tabellenstil = 'Tabelle'
+kopfstil = 'Tabellentextzentriert'
+kopfwiederholen = 'ja'

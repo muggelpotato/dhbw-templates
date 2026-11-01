@@ -1,0 +1,196 @@
+# Texte
+# Diese Datei enthält die Texte der Vorlage außer den Platzhaltern, etwa Überschriften mit der Gliederung der Kapitel, Wortlaute und Auswahllisten.
+
+# Texte der Angaben
+[text.feldtitel]
+titel = 'Titel'
+art = 'Art der Arbeit'
+abschluss = 'Abschluss'
+studiengang = 'Studiengang'
+verfasser = 'Autor'
+abgabedatum = 'Abgabedatum'
+ort = 'Ort'
+datum = 'Datum'
+arbeitsform = 'Einzel- oder Gruppenarbeit'
+arbeitsformanzeige = 'Folgt der Auswahl in der Ehrenwörtlichen Erklärung'
+kurs = 'Kurskürzel'
+firma = 'Ausbildungsfirma'
+firmenort = 'Ort der Ausbildungsfirma'
+betreuerfirma = 'Betreuer Ausbildungsfirma'
+betreuerhochschule = 'Wissenschaftlicher Betreuer'
+anschrift = 'Anschrift'
+telefon = 'Telefon'
+email = 'E-Mail'
+unternehmensdatum = 'Datum der Freigabe'
+voruebergehend = 'Klicken und tippen löscht das Feld restlos'
+sperrvermerk = 'Ohne Sperrvermerk löschen, auch den Sperrvermerk auf Seite IV'
+sperrhinweis = 'Mit Sperrvermerk nur dieses Feld löschen'
+umfang = 'Anzahl Seiten'
+sperrklausel = 'Ohne Sperrvermerk löschen, auch auf dem Titelblatt'
+tippvorgaben = 'Vor dem letzten Aktualisieren (F9) löschen'
+tippaktualisieren = 'Vor dem letzten Aktualisieren (F9) löschen'
+tippexport = 'Vor dem letzten Aktualisieren (F9) löschen'
+
+[text.auswahl]
+art = 'Projektarbeit; Seminararbeit; Studienarbeit; Bachelorarbeit; Masterarbeit'
+abschluss = 'Bachelor of Arts; Bachelor of Engineering; Bachelor of Science; Master of Arts; Master of Business Administration; Master of Engineering; Master of Science'
+studiengang = 'Architektur; BWL-Digital Business Management; BWL-Finanzdienstleistungen; BWL-Gesundheitsmanagement; BWL-Handelsmanagement; BWL-Industrial Business Management; BWL-Personalmanagement; BWL-Spedition, Transport und Logistik; BWL-Tourismus, Hotellerie und Gastronomie; Data Science und Künstliche Intelligenz – Business Management; Data Science und Künstliche Intelligenz – Digital Production; Elektrotechnik und Informationstechnik; Informatik; International Business Management Trinational; Interprofessionelle Gesundheitsversorgung; Maschinenbau; Mechatronik Trinational; Wirtschaftsinformatik; Wirtschaftsingenieurwesen'
+arbeitsform = 'Einzelarbeit; Gruppenarbeit'
+
+# Texte des Titelblatts
+[text.titelblatt]
+sperrvermerk = 'SPERRVERMERK'
+pruefung = 'für die Prüfung zum'
+studiengang = 'des Studiengangs {angabe.studiengang}'
+an = 'an der'
+hochschule = 'Dualen Hochschule Baden-Württemberg Lörrach'
+kurs = 'Kurs'
+firma = 'Ausbildungsfirma'
+betreuerfirma = 'Betreuer der Ausbildungsfirma'
+betreuerhochschule = 'Wissenschaftlicher Betreuer'
+dhbwlogo = 'Logo der DHBW Lörrach'
+
+# Ehrenwörtliche Erklärung und Umfang
+[text.erklaerung]
+ueberschrift = 'Ehrenwörtliche Erklärung'
+absatz = '{text.arbeitsform.erklaerung1} die vorliegende Arbeit selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel verwendet {text.arbeitsform.erklaerung2} und diese Arbeit bei keiner anderen Prüfung mit gleichem oder vergleichbarem Inhalt vorgelegt {text.arbeitsform.erklaerung3} und diese bislang nicht veröffentlicht wurde. Des Weiteren {text.arbeitsform.erklaerung4}, dass die eingereichte elektronische Fassung mit der gedruckten Ausfertigung übereinstimmt.'
+ortdatum = '{angabe.ort}, {angabe.datum}'
+unterschrift = '{angabe.verfasser}'
+
+[text.arbeitsform]
+erklaerung1 = 'Ich versichere hiermit, dass ich; Wir versichern hiermit, dass wir'
+erklaerung2 = 'habe; haben'
+erklaerung3 = 'habe; haben'
+erklaerung4 = 'versichere ich; versichern wir'
+ki1 = 'Ich erkläre, dass ich; Wir erklären, dass wir'
+ki2 = 'mich; uns'
+ki3 = 'meiner; unserer'
+ki4 = 'habe; haben'
+ki5 = 'habe; haben'
+ki6 = 'mir; uns'
+ki7 = 'mir bewusst bin, dass ich als Autor*in; uns bewusst sind, dass wir als Autor*innen'
+ki8 = 'trage; tragen'
+ki9 = 'habe ich; haben wir'
+
+[text.umfang]
+ueberschrift = 'Hinweis zum Umfang der Arbeit'
+absatz = 'Der Textteil der vorliegenden Arbeit, beginnend mit der Einleitung bis ausschließlich Quellenverzeichnis, umfasst {steuerelement.umfang} Seiten.'
+
+# Freigabe
+[text.freigabe]
+ueberschrift = 'Freigabe der Arbeit'
+absatz = 'Das Ausbildungsunternehmen {angabe.firma}, {angabe.firmenort}, hat die vorliegende Arbeit „{angabe.titel}“ inhaltlich geprüft. Es gibt sie zur Vorlage an der DHBW Lörrach, Studiengang {angabe.studiengang}, frei.'
+ortdatum = '{angabe.firmenort}, {angabe.unternehmensdatum}'
+unterschrift = 'Unterschrift Unternehmensvertreter'
+
+# Sperrvermerk-Seite
+[text.sperrklausel]
+ueberschrift = 'Sperrvermerk'
+absatz = 'Der Inhalt dieser Arbeit darf weder als Ganzes noch in Auszügen Personen außerhalb des Prüfungsprozesses und des Evaluationsverfahrens zugänglich gemacht werden, sofern keine anderslautende Genehmigung des Dualen Partners vorliegt.'
+ortdatum = '{angabe.firmenort}, {angabe.unternehmensdatum}'
+unterschrift = '{angabe.firma}'
+kontakt = 'Kontakt:'
+kontaktperson = '{angabe.betreuerfirma}'
+anschrift = '{angabe.anschrift}'
+telefon = '{angabe.telefon}'
+email = '{angabe.email}'
+
+# Kurzfassung
+[text.kurzfassung]
+ueberschrift = 'Kurzfassung'
+
+# Verzeichnisse
+[text.verzeichnis]
+inhalt = 'Inhaltsverzeichnis'
+abkuerzungen = 'Abkürzungsverzeichnis'
+abbildungen = 'Abbildungsverzeichnis'
+tabellen = 'Tabellenverzeichnis'
+quellen = 'Quellenverzeichnis'
+anlagen = 'Anlagenverzeichnis'
+
+# Musterabbildung, Mustertabelle und Beschriftungstexte
+[text.beschriftung]
+abbildung = 'Abbildung {feld.abbildung}:{tab}{steuerelement.abbildungstitel}'
+tabelle = 'Tabelle {feld.tabelle}:{tab}{steuerelement.tabellentitel}'
+abbildungsquelle = ' ({steuerelement.abbildungsquelle})'
+tabellenquelle = ' ({steuerelement.tabellenquelle})'
+
+# Steuerelemente der Muster
+[text.textteil]
+zitat = '''
+„{text.platzhalter.blockzitat}“{hoch:1}
+{fussnote:1}{text.platzhalter.fussnotezitat} {text.platzhalter.tippfussnote}'''
+
+# Tipps in den Kapiteln
+quellbild = '''
+{text.platzhalter.tippquelle}
+{bild}Abbildung 1: Titel{fett:▌} (Quelle)
+{bild:pfeil}{fett:↑} `Enter`
+{strich}
+{bild}Abbildung 1: Titel{fett:▌}
+{bild:pfeil}{fett:↑} `Strg+Alt+Enter`
+{bild}(Quelle)'''
+ebd = '''
+{text.platzhalter.ebdvoll}{hoch:2} {text.platzhalter.ebdseite}{hoch:3}
+{fussnote:2}{text.platzhalter.fussnoteebdvoll}
+{fussnote:3}{text.platzhalter.fussnoteebdseite}'''
+kapitelbild = '''
+{text.platzhalter.tippkapitel}
+{bild}… letzter Satz von Kapitel 5.{fett:▌} {fett:← hier klicken}
+{bild:mitte}:::::::::::::::::::::::::::::::::::::::::::::::: {oberflaeche.abschnittsumbruch} ::::::::::::::::::::::::::::::::::::::::::::::::
+{bild}{fett:6  Neues Kapitel} ← `{oberflaeche.ueberschrift1}`'''
+
+# Musterkapitel: je Zeile Nummer und Überschrift, hinter „ | “ die Stücke darunter in Folge
+# Die Punkte der Nummer geben die Ebene, die Zählung setzt Word
+gliederung = '''
+1 Die erste Überschrift
+1.1 Die erste Überschrift im ersten Kapitel (Ebene 2) | muster.unterkapitel
+1.2 Die zweite Überschrift im ersten Kapitel (Ebene 2) | muster.tippabbildung; muster.abbildung; steuerelement.tippbeschriftung
+1.3 Die dritte Überschrift im ersten Kapitel (Ebene 2) | muster.unterkapitel
+1.4 Die vierte Überschrift im ersten Kapitel (Ebene 2) | steuerelement.tippquelle; muster.tippquerverweis
+2 Die zweite Überschrift
+2.1 Die erste Überschrift im zweiten Kapitel (Ebene 2) | muster.unterkapitel
+2.2 Die zweite Überschrift im zweiten Kapitel (Ebene 2)
+2.2.1 Die erste Überschrift der dritten Ebene (Ebene 3) | muster.unterkapitel
+2.2.2 Die zweite Überschrift der dritten Ebene (Ebene 3) | muster.tipptabelle; muster.tabelle; steuerelement.tippbindung; muster.tippspaltenbreite
+2.3 Die dritte Überschrift im zweiten Kapitel (Ebene 2) | muster.unterkapitel
+2.4 Die vierte Überschrift im zweiten Kapitel (Ebene 2) | muster.unterkapitel
+3 Die dritte Überschrift
+3.1 Die erste Überschrift im dritten Kapitel (Ebene 2) | muster.unterkapitel
+3.2 Die zweite Überschrift im dritten Kapitel (Ebene 2) | steuerelement.zitatblock; muster.tippbeleg
+3.3 Die dritte Überschrift im dritten Kapitel (Ebene 2) | steuerelement.ebdblock; muster.tippebenda
+4 Die vierte Überschrift
+4.1 Die erste Überschrift im vierten Kapitel (Ebene 2) | muster.tippueberschriften
+4.2 Die zweite Überschrift im vierten Kapitel (Ebene 2) | muster.tippzeichen
+5 Die fünfte Überschrift
+5.1 Die erste Überschrift im fünften Kapitel (Ebene 2) | steuerelement.tippfazit; steuerelement.tippkapitel
+5.2 Die zweite Überschrift im fünften Kapitel (Ebene 2) | muster.unterkapitel'''
+
+# Aufbau des Anhangs
+[text.anhang]
+ueberschrift = 'Anhang'
+
+# KI-Erklärung
+[text.kierklaerung]
+ueberschrift = 'Erklärung zur Verwendung von KI-Systemen'
+einleitung = '{text.arbeitsform.ki1}'
+punkt1 = '{kaestchen} {text.arbeitsform.ki2} aktiv über die Leistungsfähigkeit und Beschränkungen der in {text.arbeitsform.ki3} Arbeit eingesetzten KI-Systeme informiert {text.arbeitsform.ki4};'
+punkt2 = '{kaestchen} alle Inhalte aus wissenschaftlich anerkannten Quellen entnommen und entsprechend gekennzeichnet {text.arbeitsform.ki5}; alle Inhalte unter Anwendung wissenschaftlicher Methoden im Rahmen der vorliegenden Arbeit von {text.arbeitsform.ki6} selbst entwickelt wurden;'
+punkt3 = '{kaestchen} {text.arbeitsform.ki7} dieser Arbeit die Verantwortung für die in ihren gemachten Angaben und Aussagen {text.arbeitsform.ki8}.'
+ueberleitung = 'Bei der Erstellung der Arbeit {text.arbeitsform.ki9} die folgenden auf künstlicher Intelligenz (KI) basierten Systeme in der im Folgenden dargestellten Weise benutzt:'
+spalten = 'Arbeitsschritt; Eingesetzte(s) KI- System(e); Beschreibung der Verwendungsweise'
+zeilen = 'Generierung von Ideen und Konzeption der Arbeit; Literatursuche; Literaturanalyse; Literaturverwaltung und Zitationsmanagement; Auswahl von Methoden und Modellen; Datensammlung und analyse; Generierung von Programmcodes; Erstellung von Visualisierungen; Interpretation und Validierung; Strukturierung des Texts der Arbeit; Formulierung des Texts der Arbeit; Übersetzung des Texts der Arbeit; Redigieren des Texts; Vorbereitung der Präsentation des Texts; Sonstiges'
+hinweis = 'Wenn Sie unsicher sind, ob und wie Sie ein verwendetes KI-System angeben müssen, wenden Sie sich an Ihre*n Betreuer*in.'
+ortdatum = '{angabe.ort}, {angabe.datum}'
+unterschrift = '{angabe.verfasser}'
+
+# Tipp zum Beleg und Musterquelle
+[text.musterquelle]
+verfasser = 'Nachname, Vorname'
+jahr = '2026'
+titel = 'Musterquelle: vor der Abgabe unter {oberflaeche.quellenverwalten} löschen'
+auflage = '1'
+ort = 'Ort'
+verlag = 'Verlag'
+kennung = 'Nac26'
+gattung = 'Book'
