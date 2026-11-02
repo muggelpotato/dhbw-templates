@@ -18,6 +18,55 @@ Inoffiziell, nicht von der DHBW herausgegeben oder geprüft. Ohne Gewähr, Richt
 2. In Word unter Zotero → Document Preferences `SZI DHBW Lörrach` wählen
 3. Unter der Überschrift Quellenverzeichnis das Verzeichnis von Word löschen und dort Zotero → Add/Edit Bibliography klicken
 
+## Vergleich mit der WDS-Vorlage
+
+<p>
+  <a href=".github/vergleich/vergleich-hell.pdf"><img src="https://img.shields.io/badge/PDF-Alle%20Seiten%20hell-F0F0F0?logo=readthedocs&logoColor=white" width="169" alt="PDF mit allen Seiten, hell" /></a>
+  <a href=".github/vergleich/vergleich-dunkel.pdf"><img src="https://img.shields.io/badge/PDF-Alle%20Seiten%20dunkel-262626?logo=readthedocs&logoColor=white" width="188" alt="PDF mit allen Seiten, dunkel" /></a>
+</p>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/vergleich/titelblatt-dunkel.png">
+  <img src=".github/vergleich/titelblatt-hell.png" alt="Titelblatt der WDS-Vorlage neben dem der neuen Vorlage">
+</picture>
+
+Auswahllisten für Art der Arbeit, Abschluss und Studiengang, einmal eingetragene Angaben stehen überall
+
+<details>
+<summary>Weitere Seiten im Vergleich</summary>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/vergleich/erklaerung-dunkel.png">
+  <img src=".github/vergleich/erklaerung-hell.png" alt="Ehrenwörtliche Erklärung der WDS-Vorlage neben der der neuen Vorlage">
+</picture>
+
+Einheitliche Formate, Wortlaut der aktuellen [StuPrO](https://dhbw-loerrach.de/pruefungsamt/rund-um-das-studium/studien-und-pruefungsordnung), umschaltbar für Einzel- oder Gruppenarbeit
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/vergleich/abkuerzungen-dunkel.png">
+  <img src=".github/vergleich/abkuerzungen-hell.png" alt="Abkürzungsverzeichnis der WDS-Vorlage neben dem der neuen Vorlage">
+</picture>
+
+Abkürzungen in einer handlichen Tabelle, passende Tipps stehen gleich daneben
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/vergleich/textteil-dunkel.png">
+  <img src=".github/vergleich/textteil-hell.png" alt="Kapitel 2 der WDS-Vorlage neben dem der neuen Vorlage">
+</picture>
+
+Tipps zu Word und Richtlinie statt Lorem ipsum, Platzhalter verschwinden beim ersten Tippen
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/vergleich/ki-dunkel.png">
+  <img src=".github/vergleich/ki-hell.png" alt="Erklärung zur Verwendung von KI-Systemen, nur in der neuen Vorlage">
+</picture>
+
+KI-Erklärung vorbereitet, alles in einer Datei statt verteilter Formulare
+
+</details>
+
+Quelle der linken Seiten: [WDS-Vorlage der DHBW Lörrach](https://dhbw-loerrach.de/data-science/studieninhalte), Stand 26.06.2025
+
 ## Selbstbau
 
 Der Bau braucht Word, PowerShell 5.1 und Python ab 3.12:
